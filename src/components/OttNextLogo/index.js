@@ -1,0 +1,1 @@
+export {OttNextLogo} from './OttNextLogo';

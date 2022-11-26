@@ -1,4 +1,4 @@
-function OttNextLogo(props) {
+export const OttNextLogo = (props) => {
   return (
     <svg
       width={317}
@@ -18,6 +18,4 @@ function OttNextLogo(props) {
       />
     </svg>
   )
-}
-
-export default OttNextLogo
+};
