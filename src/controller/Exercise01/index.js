@@ -1,7 +1,8 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useState } from 'react';
 import { discountRules } from '../../dummyData';
 
-const useExercise01Controller = () => {
+const cartController = () => {
   const [cart, setCart] = useState([{
       id: 1,
       name: 'Star Wars',
@@ -50,7 +51,7 @@ const useExercise01Controller = () => {
         discount = dRule.discount > discount ? dRule.discount : discount;
       };
     });
-    console.info("final discount", discount);
+    console.info(`final discount is ${discount} (${discount * 100}%)`);
     const total = discount > 0 ? sumCart - (sumCart * discount) : sumCart;
     return total;
   };
@@ -64,4 +65,4 @@ const useExercise01Controller = () => {
   };
 };
 
-export default useExercise01Controller;
+export default cartController;
